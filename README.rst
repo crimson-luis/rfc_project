@@ -18,5 +18,9 @@ Run "poetry install".
 - pandas = "^1.3.5"
 - black = "^21.12b0"
 
-More things
-___________
+Usage
+_____
+1) Clone github repository
+2) Install py poetry
+3) Run: poetry install
+4) Test with poetry: run python main.py
