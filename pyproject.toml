@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "rfc_segmentacao"
+version = "0.1.0"
+description = ""
+authors = ["luis_guilherme97 <61566116+crimson-luis@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+sklearn = "^0.0"
+pandas = "^1.3.5"
+black = "^21.12b0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
