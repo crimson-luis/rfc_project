@@ -13,7 +13,7 @@ class GaussianModel:
             n_jobs=1,
             verbose=0,
             bootstrap=True,
-            max_depth=None,
+            max_depth=3,
             oob_score=False,
             criterion='gini',
             warm_start=False,
@@ -33,12 +33,11 @@ class GaussianModel:
         self.accuracy = None
 
     def train(self, test_size: float = 0.3):
-        (
-            explanatory_train,
-            explanatory_test,
-            response_train,
-            response_test,
-        ) = train_test_split(
+        (explanatory_train,
+         explanatory_test,
+         response_train,
+         response_test,
+         ) = train_test_split(
             self.data[self.x], self.data[self.y], test_size=test_size
         )
         self.clf.fit(explanatory_train, response_train)
