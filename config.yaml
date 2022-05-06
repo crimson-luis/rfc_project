@@ -1,0 +1,11 @@
+PARAMETERS:
+        MAX_LEAF_NODES: 8
+        RANDOM_STATE: 42
+        N_ESTIMATORS: 10
+        MAX_FEATURES: 21  # p / 2
+        MAX_DEPTH: 3
+
+DATASET:
+        NAME: STULONG
+        CLASS: BasicGroup
+        N_SPLITS: 10

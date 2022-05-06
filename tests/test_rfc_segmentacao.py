@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn import datasets
-from src.random_forest_classifier import GaussianModel
+from src.random_forest_classifier import RFClassifier
 from src import __version__
 # from scripts.sample import Hajek
 
@@ -10,7 +10,7 @@ def test_version():
 
 
 def run_rf_test():
-    model = GaussianModel(
+    model = RFClassifier(
         x=['sepal length',
            'sepal width',
            'petal length',
