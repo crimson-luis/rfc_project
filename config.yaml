@@ -1,11 +1,77 @@
 PARAMETERS:
         MAX_LEAF_NODES: 8
-        RANDOM_STATE: 42
         N_ESTIMATORS: 10
-        MAX_FEATURES: 21  # p / 2
+        MAX_FEATURES: 14  # 1 a p / 2
         MAX_DEPTH: 3
 
 DATASET:
+#        NAME: THYROID
+#        CLASS: diagnoses
+#        N_SPLITS: 10
+#        FEATURES: [
+#                        "diagnoses",
+#                        "age",
+#                        "sex",
+#                        "on_thyroxine",
+#                        "query_on_thyroxine",
+#                        "on_antithyroid_med",
+#                        "sick",
+#                        "pregnant",
+#                        "thyroid_surgery",
+#                        "i131_treatment",
+#                        "query_hypothyroid",
+#                        "query_hyperthyroid",
+#                        "lithium",
+#                        "goitre",
+#                        "tumor",
+#                        "hypopituitary",
+#                        "psych",
+#                        "TSH",
+#                        "T3",
+#                        "TT4",
+#                        "T4U",
+#                        "FTI",
+#        ]
+
         NAME: STULONG
-        CLASS: BasicGroup
+        CLASS: Classe
         N_SPLITS: 10
+        # FEATURES STULONG
+#        FEATURES: [
+#                        "Classe",
+#                        "FaixaIMC",
+#                        "Fumante",
+#                        "PressaoSanguinea",
+#                        "Colesterol",
+#        ]
+
+        # FEATURES REFERÊNCIA 1
+#        FEATURES: [
+#                        "Classe",
+#                        "FaixaEtaria",
+#                        "Educacao",
+#                        "FaixaIMC",
+#                        "Fumante",
+#                        "Alcool",
+#                        "ConsCervejaDiaria",
+#                        "AtoFisNoTrab",
+#        ]
+
+        # FEATURES REFERÊNCIA 2
+#        FEATURES: [
+#                        "Classe",
+#                        "FaixaEtaria",
+#                        "PressaoSanguinea",
+#                        "Colesterol",
+#        ]
+
+        # FEATURES REFERÊNCIA 3
+        FEATURES: [
+                        "Classe",
+                        "FaixaEtaria",
+                        "Educacao",
+                        "Fumante",
+                        "PressaoSanguinea",
+                        "Colesterol",
+                        "FaixaIMC",
+        ]

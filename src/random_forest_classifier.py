@@ -5,16 +5,17 @@ import yaml
 with open("./config.yaml", "r") as file:
     config = yaml.safe_load(file)
 
+DATASET = config['DATASET']['NAME']
+
 
 class RFClassifier(RandomForestClassifier):
     def __init__(self):
         super().__init__()
-        self.parameters = config['PARAMETERS']
-        self.max_leaf_nodes = self.parameters['MAX_LEAF_NODES']
-        # self.random_state = self.parameters['RANDOM_STATE']
-        self.n_estimators = self.parameters['N_ESTIMATORS']
-        self.max_features = self.parameters['MAX_FEATURES']
-        self.max_depth = self.parameters['MAX_DEPTH']
+        # self.parameters = config['PARAMETERS']
+        # self.max_leaf_nodes = self.parameters['MAX_LEAF_NODES']
+        # self.n_estimators = self.parameters['N_ESTIMATORS']
+        # self.max_features = self.parameters['MAX_FEATURES']
+        # self.max_depth = self.parameters['MAX_DEPTH']
 
     def model_to_txt(self, index, show: bool = True, save: bool = False):
         # https://scikit-learn.org/stable/auto_examples/tree/plot_unveil_tree_structure.html#sphx-glr-auto-examples-tree-plot-unveil-tree-structure-py
@@ -65,11 +66,12 @@ class RFClassifier(RandomForestClassifier):
                         f"\n{i} IN {children_left[i]} {children_right[i]} "
                         f"{tree.feature[i]} {tree.threshold[i]} {node_depth[i]} -1"
                     )
+        model_info.append("\n\n")
         if show:
             print(*model_info)
         if save:
             with open(
-                    f"./data/processed/forests/{config['DATASET']['NAME']}.RF{index}.txt",
+                    f"./data/processed/{DATASET}/{DATASET}.RF{index}.txt",
                     "w"
             ) as f:
                 for item in model_info:
