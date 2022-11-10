@@ -6,7 +6,8 @@ Random Forest Classification
 :Copyright: This project is licensed under the GNU General Public License v3.0.
 .. contents::
 
-**Outdated**
+**Outdated** 
+
 A **module** for selection of features and training random forest models.
 Sampling method used is SRS (Simple Random Sample) with the Hajek algorithm.
 
